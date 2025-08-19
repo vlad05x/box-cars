@@ -1,5 +1,6 @@
 "use client";
 import Header from "@/components/layouts/Header";
+import BrandSection from "@/features/BrandsSection/page";
 import MainPage from "@/features/main/page";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <Header />
       <MainPage />
+      <BrandSection />
     </>
   );
 }
