@@ -1,18 +1,30 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import "@/styles/globals.scss";
+"use client";
+
+import { Box } from "@mui/material";
+import Header from "@/components/layouts/Header";
 
 export default function Home() {
   return (
     <>
-      <Box sx={{ padding: 2, textAlign: "center" }}>
-        <Typography variant="h2" component="h2" gutterBottom>
-          Welcome to Box Cars
-        </Typography>
-        <Typography variant="body1">
-          This is a sample application using Next.js and Material-UI.
-        </Typography>
-      </Box>
+      <Header />
+      <Box
+        sx={{
+          height: "950px",
+          position: "relative",
+          backgroundImage: "url('/assets/images/img-main.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.5)",
+          }, // чтобы не повторялось
+        }}
+      ></Box>
     </>
   );
 }
